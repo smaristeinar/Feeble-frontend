@@ -9,11 +9,9 @@ function EnterLocation(props) {
     return (
         
         <>
-            <h3>Enter Location</h3>
-            <input type="text" placeholder="City" /> <br />
-            <input type="text" placeholder="Street"/> <br />
-            <input type="text" placeholder="Name"/> <br />
-            <button onClick={saveLocation}>Save</button>
+            <h3 className="p-1">Enter Location</h3>
+            <input className="mb-4" type="text" placeholder="City" /> 
+            <input className="mb-10" type="text" placeholder="Street"/> 
         </>
     )
 }

@@ -26,17 +26,16 @@ function CreateSession() {
   return (
     <>
     <h1 className="text-center text-6xl">Create Session</h1>
-    <label>Time & Date </label> <br/>
-            <input type="datetime-local" /> <br/>
-            <button>Invite Skaters</button> <br />
-            <button 
-                onClick={enterLocation}>Enter Location</button> <br/>
-            <p>OR</p>
-            <button>Pin on Map</button> <br />
+    <div className="flex flex-col justify-center p-4">
+            <h1 className="p-1">Time & Date </h1>
+            <input type="datetime-local" />
+            <EnterLocation />
             <button 
                 onClick={handlePostSession}>Post Session
             </button>
+    </div>
     </>
+ 
   );
 }
 
