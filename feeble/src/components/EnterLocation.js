@@ -3,9 +3,9 @@ import React from 'react'
 function EnterLocation(props) {
 
     //save location function
-    const saveLocation = () =>{
-            props.enterLocation()
-    }
+    // const saveLocation = () =>{
+    //         props.enterLocation()
+    // }
     return (
         
         <>

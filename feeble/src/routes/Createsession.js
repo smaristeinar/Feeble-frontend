@@ -1,28 +1,30 @@
 import React from "react"
-import {useState } from 'react';
+// import {useState } from 'react';
 import EnterLocation from "../components/EnterLocation";
 //import Create from "../components/Create";
 
 function CreateSession() {
     // states
-    const [enterLo, setEnterLo] = useState(false)
+    
+    // const [enterLo, setEnterLo] = useState(false)
 
     // handle post session function
     const handlePostSession=() =>{
+      console.log("Clicked post session button");
     }
 
     // enter location function
-    const enterLocation =() =>{
-        console.log("clicked enter location");
-        setEnterLo(!enterLo)   
-    }
-    if (enterLo){
-        return (
-        <>
-        <EnterLocation enterLocation={enterLocation}/>
-        </>
-        )
-    }
+    // const enterLocation =() =>{
+    //     console.log("clicked enter location");
+    //     setEnterLo(!enterLo)   
+    // }
+    // if (enterLo){
+    //     return (
+    //     <>
+    //     <EnterLocation enterLocation={enterLocation}/>
+    //     </>
+    //     )
+    // }
   return (
     <>
     <h1 className="text-center text-6xl">Create Session</h1>
