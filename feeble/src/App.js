@@ -6,18 +6,40 @@ import Login from './routes/Login';
 import Myprofile from './routes/Myprofile';
 import CreateSession from './routes/Createsession';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
-  return (
+  
+  const [user, setUser] = useState();
+
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = (loggedInUser);
+      setUser(foundUser);
+     
+    }
+  }, []);
+
+  if (user) {
+    return(
     <Router>
       <Nav />
-        <Route path="/Login" component={Login}/>
         <Route path="/Session" component={Session}/>
         <Route path="/Myprofile" component={Myprofile}/>
         <Route path="/CreateSession" component={CreateSession}/>
     </Router>
+    )} 
+    else {
+      return(
+    <Login />
+    )
+  }
 
-  );
 }
 
 export default App;
+
+

@@ -1,16 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 
-
-
 function Login() {
 
   const [Username, setUsername] = useState("")
   const [Password, setPassword] = useState("")
 
+  function onChange(evt) {
+    setUsername(evt.target.value);
+  }
+  function onChange2(evt) {
+    setPassword(evt.target.value);
+  }
+
 
   function onClick() {
-
     const login = { Username, Password };
     console.log('login', login);
 
@@ -25,22 +29,19 @@ function Login() {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data', data);
+        console.log('data', data.message);
 
-
-      }
-
-      )
+        if(data.message === `Användare: ${Username} inloggad`){
+          console.log("login successfull");
+          localStorage.setItem("user", Username );
+          //bad solution - will try to figure out how to redirect properly
+          window.location.href = 'http://localhost:3001/Session';
+         
+          
+        } else {
+          console.log("Login failed");
+        }})
   }
-
-  function onChange(evt) {
-    setUsername(evt.target.value);
-  }
-  function onChange2(evt) {
-    setPassword(evt.target.value);
-  }
-
-
 
   return (
     <>
