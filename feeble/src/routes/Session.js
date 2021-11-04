@@ -1,29 +1,28 @@
-import React from "react"
+import React, { Component } from 'react'
 import SessionCard from "../components/SessionCard";
+let sessions = [];
 
-function Session() {
-  let mockData= [
-    {
-     sessionId:1,
-     location:"skatespot address 12",
-     time:"06/01/1999 Mon 16:00",
-     users:["me","someone else","that other guy"]
-    },
-  {
-    sessionId:2,
-    location:"skatepark some where",
-    time:"23/09/2021 Tue 13:30",
-    users:["radical man","Gnarly man","tre flip king69"]
-  }
-];
+export default class session2 extends Component {
+    state = {
+        loading: true,
+        sessions: null
+    };
 
-  return (
-    <div>
-    <h1 className="text-center text-6xl">Session</h1>
-    <SessionCard info={mockData}/>
-    </div>
-    
-  );
+
+    async componentDidMount() {
+        const url = "http://localhost:5000/session";
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({sessions:data,loading:false })
+        console.log(data);
+    }
+
+    render(){
+        return(
+            <div>
+                 <h1 className="text-center text-6xl">Session</h1>
+                {this.state.loading ? <div>loading</div> : <SessionCard info={this.state.sessions}/>}
+            </div>
+        )
+    }
 }
-
-export default Session;
