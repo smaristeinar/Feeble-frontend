@@ -35,7 +35,7 @@ function Login() {
           console.log("login successfull");
           localStorage.setItem("user", Username );
           //bad solution - will try to figure out how to redirect properly
-          window.location.href = 'http://localhost:3001/Session';
+          window.location.href = 'http://localhost:3000/Session';
          
           
         } else {
