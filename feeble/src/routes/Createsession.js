@@ -1,5 +1,6 @@
 import React from "react"
 import {useState } from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 
 function CreateSession() {
@@ -7,6 +8,12 @@ function CreateSession() {
     const [city, setCity] = useState("");
     const [street, setStreet] = useState("");
     const [date, setDate] = useState("");
+    const [userName, setUserName] = useState(localStorage.getItem("user"));
+    const [users, setUsers] = useState([localStorage.getItem("user")]);
+    const [sessionId, setSessionId] = useState(uuidv4());
+    
+
+    
 
     function cityInput(evt){
       setCity(evt.target.value)
@@ -22,26 +29,32 @@ function CreateSession() {
     }
     
 
+    
+    
+
     // handle post session function
     const handlePostSession=() =>{
+      
       console.log("posting new session")
-      let dateAndAddress = {date, city, street};
+      let dateAndAddress = {userName, sessionId, date, city, street, users};
       console.log(dateAndAddress)
+
+      fetch("http://localhost:5000/session/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+
+      },
+      body: JSON.stringify(dateAndAddress)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
+
 
     }
 
-    // enter location function
-    // const enterLocation =() =>{
-    //     console.log("clicked enter location");
-    //     setEnterLo(!enterLo)   
-    // }
-    // if (enterLo){
-    //     return (
-    //     <>
-    //     <EnterLocation enterLocation={enterLocation}/>
-    //     </>
-    //     )
-    // }
   return (
     <>
     <h1 className="text-center text-6xl">Create Session</h1>
