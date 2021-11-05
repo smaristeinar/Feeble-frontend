@@ -2,12 +2,12 @@ import React from "react";
 import UserCard from "../components/UserCard"
 
 function Myprofile() {
-  let mockData = {
+let mockData = {
     userId:1,
     userName:"Off-The-Hook-dude123",
     stance:"goofy",
     location:"malmo"
-  }
+  }  
 
   return (
     <div className="flex justify-center items-center">

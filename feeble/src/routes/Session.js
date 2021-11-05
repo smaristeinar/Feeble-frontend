@@ -21,7 +21,7 @@ export default class session2 extends Component {
         return(
             <div>
                  <h1 className="text-center text-6xl">Session</h1>
-                {/* {this.state.loading ? <div>loading</div> : <SessionCard info={this.state.sessions}/>} */}
+                {this.state.loading ? <div>loading</div> : <SessionCard info={this.state.sessions}/>}
             </div>
         )
     }
