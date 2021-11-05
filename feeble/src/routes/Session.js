@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SessionCard from "../components/SessionCard";
 let sessions = [];
 
-export default class session2 extends Component {
+export default class session extends Component {
     state = {
         loading: true,
         sessions: null
