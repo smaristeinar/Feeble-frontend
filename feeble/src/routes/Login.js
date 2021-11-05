@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
+import Logo from "../logoWSkater.png";
+import LogoClean from "../logoClean.png";
+import LogoBoard from "../logoSkateB.png";
 
 function Login() {
 
@@ -45,9 +48,8 @@ function Login() {
 
   return (
     <>
-      <h1 className="text-center text-6xl">Login</h1>
-      <div className="text-center text-2xl mt-44 flex-column">
-        <h2 >Place logo here</h2>
+      <img className="object-center mx-auto mt-10" src={LogoBoard} alt="logo with feeble and skater"/> 
+      <div className="text-center text-2xl mt-15 flex-column">
         <input onChange={onChange} className="text-left px-3 text-2xl mt-5 border rounded bg-gray-200" type="text" placeholder="Username" /><br></br>
         <input onChange={onChange2} className="text-left px-3 text-2xl mt-5 border rounded bg-gray-200" type="password" placeholder="Password" /><br></br>
         <button onClick={onClick} className="text-left px-3 py-1 text-2xl mt-5 border rounded bg-gray-200 ">Login</button>

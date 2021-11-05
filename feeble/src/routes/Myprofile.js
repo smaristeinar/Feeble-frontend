@@ -13,7 +13,7 @@ function Myprofile() {
     <div className="flex justify-center items-center">
       <div>
         <h1 className=" pb-10 text-center text-6xl">My profile</h1>
-        <UserCard name={mockData.userName} stance={mockData.stance} location={mockData.location} />
+        <UserCard name={localStorage.getItem("user")} stance={mockData.stance} location={mockData.location} />
       </div>
     </div>
   );
