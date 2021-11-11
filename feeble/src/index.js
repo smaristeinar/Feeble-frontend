@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Wave from "./wave.js";
+
 
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Wave  />
   </React.StrictMode>,
   document.getElementById('root')
 );
