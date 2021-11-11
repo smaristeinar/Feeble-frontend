@@ -9,11 +9,12 @@ function Map(props){
         const provider = new OpenStreetMapProvider();
 
         async function loadGeo(address){
+            
             const res = await provider.search({query: `"${address}"`})
             Setgeo([res[0].y,res[0].x])
             Setload(true)
         }
-        useEffect(()=>{loadGeo(props.address.city)},[])
+        useEffect(()=>{loadGeo(props.address.street)},[])
         
     return(
         <div className="">
