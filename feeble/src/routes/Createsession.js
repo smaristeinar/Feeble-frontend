@@ -36,8 +36,8 @@ function CreateSession() {
     const handlePostSession=() =>{
       
       console.log("posting new session")
-      let dateAndAddress = {userName, sessionId, date, city, street, users};
-      console.log(dateAndAddress)
+      let sessionDetails = {userName, sessionId, date, city, street, users};
+      console.log(sessionDetails)
 
       fetch("http://localhost:5000/session/add", {
       method: "POST",
@@ -45,7 +45,7 @@ function CreateSession() {
         "Content-Type": "application/json",
 
       },
-      body: JSON.stringify(dateAndAddress)
+      body: JSON.stringify(sessionDetails)
     })
       .then(res => res.json())
       .then(data => {
@@ -57,16 +57,19 @@ function CreateSession() {
 
   return (
     <>
-    <h1 className="text-center text-6xl">Create Session</h1>
-    <div className="flex flex-col justify-center p-4">
-            <h1 className="p-1">Time & Date </h1>
-            <input onChange={dateInput} type="datetime-local" />
-            <h3 className="p-1">Enter Location</h3>
-            <input onChange={cityInput} className="mb-4" type="text" placeholder="City" /> 
-            <input onChange={streetInput} className="mb-10" type="text" placeholder="Street"/> 
-            <button 
-                onClick={handlePostSession}>Post Session
-            </button>
+    <div>
+    <h1 className="text-center text-6xl font-bold mt-5 mb-0 font-sans">Create Session</h1>
+    {/* <h1 className="text-center text-6xl font-bold mt-0 mb-5 font-sans transform rotate-180 text-transparent bg-clip-text bg-gradient-to-b from-transparent to-black">Create Session</h1> */}
+    </div>
+    <div className="flex flex-col justify-center m-10 ">
+            <h1 className="p-1 text-center font-medium mb-3 text-xl">Time & Date </h1>
+            <input className="border rounded bg-gray-200 shadow-xl" onChange={dateInput} type="datetime-local" />
+            <h3 className="p-0 mt-3 text-center font-medium mb-3 text-xl">Enter Location</h3>
+            <input onChange={cityInput} className="mb-4 border rounded bg-gray-200 shadow-xl" type="text" placeholder="City" /> 
+            <input onChange={streetInput} className="mb-5 border rounded bg-gray-200 shadow-xl" type="text" placeholder="Street"/> 
+            <div className="flex justify-center">
+            <button className="w-28 border rounded-xl bg-gray-200 shadow-xl font-medium" onClick={handlePostSession}>Post Session</button>
+            </div>
     </div>
     </>
  
