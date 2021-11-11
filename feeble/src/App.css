@@ -70,3 +70,8 @@ body{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  #sessionCards:hover {
+    background-color: #ff7bac;
+    transition-duration: 1s;
+  }

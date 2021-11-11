@@ -1,6 +1,7 @@
 import React from "react"
 import {useState } from 'react';
 import {v4 as uuidv4} from 'uuid';
+import moment from "moment"
 
 
 function CreateSession() {
@@ -24,7 +25,9 @@ function CreateSession() {
       
     }
     function dateInput(evt){
-      setDate(evt.target.value)
+      let dateTime = moment(evt.target.value).format('MMMM Do YYYY, h:mm:ss a'); 
+      console.log(dateTime) 
+      setDate(dateTime)
       
     }
     
