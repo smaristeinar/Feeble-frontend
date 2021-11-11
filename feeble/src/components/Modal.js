@@ -22,12 +22,15 @@ function Modal(props){
     
 
     return(
-        <div className="p-5 m-5 bg-gray-50 bg-opacity-50 rounded-md" >
+        <div className="p-5 m-5 bg-gray-50 bg-opacity-50 rounded-lg flex flex-row" >
             <Map address={props.info}/>
+            <div className="ml-5">
             <h1>{props.info.city}</h1>
             <h1>{props.info.street}</h1>
             <h1>{props.info.date}</h1>
-            <button className=" mt-10 w-28 border rounded-xl bg-gray-200 shadow-xl font-medium" onClick={addUserToSession}>Join</button>
+            <div className="flex flex-row"><p className="font-medium">Participants:</p><ul><li className="font-normal ml-3">{props.info.users}</li></ul></div>
+            <button className=" mt-5 w-28 border rounded-xl bg-gray-200 shadow-xl font-medium" onClick={addUserToSession}>Join</button>
+            </div>
         </div>
     
     );
