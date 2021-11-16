@@ -12,7 +12,7 @@ let mockData = {
   return (
     <div className="flex justify-center items-center font-sans">
       <div>
-        <h1 className=" pb-10 text-center text-6xl font-bold">My profile</h1>
+        <h1 className=" pb-10 text-center text-6xl font-bold mt-5">My profile</h1>
         <UserCard name={localStorage.getItem("user")} stance={mockData.stance} location={mockData.location} />
       </div>
     </div>

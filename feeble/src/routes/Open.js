@@ -16,7 +16,7 @@ export default class Open extends Component {
         return (
             
             <div>
-                <h1 className="text-center text-6xl">Session</h1>
+                <h1 className="text-center text-6xl font-bold tracking-wider mt-5 mb-10">Session</h1>
                 {this.state.items ? <Modal info={this.state.items}/>:<div>this does not exist</div>}
             </div>
         )

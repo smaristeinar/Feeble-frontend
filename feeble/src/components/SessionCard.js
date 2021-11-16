@@ -56,7 +56,7 @@ function SessionCard(props){
              <div className="flex flex-row"><p>Street:</p><p className="font-normal ml-3">{value.street}</p></div>
              <div className="flex flex-row"><p>City:</p><p className="font-normal ml-3"> {value.city}</p></div>
              <div className="flex flex-row"><p>When:</p><p className="font-normal ml-3"> {value.date}</p></div>
-             <div className="flex flex-row"><p>Participants:</p><ul><li className="font-normal ml-3">{value.users}</li></ul></div>
+             {/* <div className="flex flex-row"><p>Participants:</p><ul><li className="font-normal ml-3">{value.users}</li></ul></div> */}
                
          </div>
          </Link> 
