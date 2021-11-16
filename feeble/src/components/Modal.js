@@ -21,6 +21,9 @@ function Modal(props) {
             .then(data => {
                 console.log('front', data)
 
+                props.info.users = data;
+
+
             })
     }
 
