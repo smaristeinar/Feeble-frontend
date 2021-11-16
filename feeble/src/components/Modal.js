@@ -28,9 +28,10 @@ function Modal(props) {
     }
 
 
-    return (
-        <div className="p-5 m-5 bg-gray-50 bg-opacity-50 rounded-lg flex flex-row" >
-            <Map address={props.info} />
+    return(
+        <div className="p-5 m-5 bg-gray-50 bg-opacity-50 rounded-lg flex flex-col md:flex-row " >
+            <Map address={props.info}/>
+
             <div className="ml-5">
                 <h1>{props.info.city}</h1>
                 <h1>{props.info.street}</h1>

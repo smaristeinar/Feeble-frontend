@@ -7,10 +7,6 @@ body{
     background-color: rgba(249, 168, 212);
 }
 
-.map-conatiner{
-    width: 180px;
-    height: 180px;
-}
 .switch {
     position: relative;
     display: inline-block;

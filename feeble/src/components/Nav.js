@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import {useState} from "react"
+import Wave from "../wave.js"
 
 function Nav() {
   
@@ -32,6 +33,7 @@ function Nav() {
          
         </ul>
     </nav>
+    <Wave  />
     </div>
     
   ];

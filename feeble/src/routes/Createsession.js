@@ -25,15 +25,13 @@ function CreateSession() {
       
     }
     function dateInput(evt){
-      let dateTime = moment(evt.target.value).format('MMMM Do YYYY, h:mm:ss a'); 
+      let dateTime = moment(evt.target.value).format('MMMM Do YYYY, h:mm a'); 
       console.log(dateTime) 
       setDate(dateTime)
       
     }
     
 
-    
-    
 
     // handle post session function
     const handlePostSession=() =>{
@@ -64,7 +62,7 @@ function CreateSession() {
     <h1 className="text-center text-6xl font-bold mt-5 mb-0 font-sans">Create Session</h1>
     {/* <h1 className="text-center text-6xl font-bold mt-0 mb-5 font-sans transform rotate-180 text-transparent bg-clip-text bg-gradient-to-b from-transparent to-black">Create Session</h1> */}
     </div>
-    <div className="flex flex-col justify-center m-10 ">
+    <div className="flex flex-col justify-center m-10 md:mx-56">
             <h1 className="p-1 text-center font-medium mb-3 text-xl">Time & Date </h1>
             <input className="border rounded bg-gray-200 shadow-xl" onChange={dateInput} type="datetime-local" />
             <h3 className="p-0 mt-3 text-center font-medium mb-3 text-xl">Enter Location</h3>
