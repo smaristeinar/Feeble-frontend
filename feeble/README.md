@@ -16,5 +16,6 @@ This is the front end repo for Feeble, this app will let you connect with other 
 	* Tailwind
 	* React-Leaflet
 	* leaflet-geosearch
-	* moment			
+	* moment
+	* uuid			
 5. To start the app write in the terminal "npm start"		
