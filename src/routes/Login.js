@@ -38,6 +38,7 @@ function Login() {
           localStorage.setItem("user", Username );
           //bad solution - will try to figure out how to redirect properly
           window.location.href = 'https://smaristeinar.github.io/feeble-build/#/Session';
+          window.location.reload()
          
           
         } else {

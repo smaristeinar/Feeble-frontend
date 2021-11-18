@@ -51,8 +51,8 @@ function CreateSession() {
       .then(res => res.json())
       .then(data => {
         console.log(data)
-      })
-      window.location.href = 'https://smaristeinar.github.io/feeble-build/#/Session';
+      }).then(()=>{ window.location.href = 'https://smaristeinar.github.io/feeble-build/#/Session';
+      window.location.reload()})
 
     }
 
