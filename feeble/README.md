@@ -16,7 +16,8 @@ This is the front end repo for Feeble, this app will let you connect with other 
 	* React-Leaflet
 	* leaflet-geosearch
 	* moment
-	* uuid			
+	* uuid
+	* github-api			
 5. To start the app write in the terminal "npm start".	
 6. Login  with.
 	* User: kemikal Pass:1234
