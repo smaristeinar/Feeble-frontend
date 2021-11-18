@@ -13,7 +13,7 @@ export default class session extends Component {
 
 
     async componentDidMount() {
-        const url = "http://localhost:5000/session";
+        const url = "https://feeble.herokuapp.com/session";
         const response = await fetch(url);
         const data = await response.json();
         this.setState({sessions:data,loading:false })

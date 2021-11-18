@@ -40,7 +40,7 @@ function CreateSession() {
       let sessionDetails = {userName, sessionId, date, city, street, users};
       console.log(sessionDetails)
 
-      fetch("http://localhost:5000/session/add", {
+      fetch("https://feeble.herokuapp.com/session/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
