@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/feeble-frontend/static/css/main.3713b483.chunk.css",
+    "main.js": "/feeble-frontend/static/js/main.13ee4b25.chunk.js",
+    "main.js.map": "/feeble-frontend/static/js/main.13ee4b25.chunk.js.map",
+    "runtime-main.js": "/feeble-frontend/static/js/runtime-main.ca9b4e9f.js",
+    "runtime-main.js.map": "/feeble-frontend/static/js/runtime-main.ca9b4e9f.js.map",
+    "static/js/2.67274ba6.chunk.js": "/feeble-frontend/static/js/2.67274ba6.chunk.js",
+    "static/js/2.67274ba6.chunk.js.map": "/feeble-frontend/static/js/2.67274ba6.chunk.js.map",
+    "static/js/3.29ac43ba.chunk.js": "/feeble-frontend/static/js/3.29ac43ba.chunk.js",
+    "static/js/3.29ac43ba.chunk.js.map": "/feeble-frontend/static/js/3.29ac43ba.chunk.js.map",
+    "index.html": "/feeble-frontend/index.html",
+    "static/css/main.3713b483.chunk.css.map": "/feeble-frontend/static/css/main.3713b483.chunk.css.map",
+    "static/js/2.67274ba6.chunk.js.LICENSE.txt": "/feeble-frontend/static/js/2.67274ba6.chunk.js.LICENSE.txt",
+    "static/media/logoSkateB.6a4fc919.png": "/feeble-frontend/static/media/logoSkateB.6a4fc919.png",
+    "static/media/waveLarge.cbd53cbe.png": "/feeble-frontend/static/media/waveLarge.cbd53cbe.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca9b4e9f.js",
+    "static/js/2.67274ba6.chunk.js",
+    "static/css/main.3713b483.chunk.css",
+    "static/js/main.13ee4b25.chunk.js"
+  ]
+}
